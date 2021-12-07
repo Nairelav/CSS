@@ -10,21 +10,49 @@
   <body>
     <section>
       <div class="container">
+        <!-- SIGN IN -->
         <div class="user signinBx">
           <div class="imgBx">
-            <img src="./img/img1.jpg" alt="">
+            <img src="./img/img2.jpg" alt="">
           </div>
           <div class="formBx">
             <form>
               <h2>Sign In</h2>
               <input type="text" placeholder="Username">
               <input type="text" placeholder="Password">
-              <input type="submit" value="login">
-              <p class="signup">don't have an account ? <a href="a">Sign in</a></p>
+              <input type="submit" value="Login">
+              <p class="signup">don't have an account ? <a href="#" onclick="toggleForm();">Sign up</a></p>
             </form>
+          </div>
+        </div>
+
+        <!-- SIGN UP -->
+        <div class="user signupBx">
+          <div class="formBx">
+            <form>
+              <h2>Create an account</h2>
+              <input type="text" placeholder="Username">
+              <input type="text" placeholder="Email">
+              <input type="text" placeholder="Password">
+              <input type="text" placeholder="Confirm password">
+              <input type="submit" value="Sign Up">
+              <p class="signup">Already have an account ? <a href="#" onclick="toggleForm();">Sign in</a></p>
+            </form>
+          </div>
+          <div class="imgBx">
+            <img src="./img/img1.jpg" alt="">
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      function toggleForm() {
+        section = document.querySelector('section');
+        container = document.querySelector('.container');
+        section.classList.toggle('active');
+        container.classList.toggle('active');
+      }
+    </script>
   </body>
 </html>
